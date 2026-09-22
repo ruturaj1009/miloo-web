@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Sparkles, ShieldCheck, Heart, Users } from 'lucide-react';
 
 export default function DownloadCta() {
@@ -239,13 +240,13 @@ export default function DownloadCta() {
                   boxShadow: '0 25px 60px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.12)',
                 }}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/miloo_couple_download.jpg"
+                <Image
+                  src="/images/miloo_couple_download.webp"
                   alt="Couple laughing together with Miloo app"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 480px"
+                  loading="lazy"
                   style={{
-                    width: '100%',
-                    height: '100%',
                     objectFit: 'cover',
                     objectPosition: 'center 20%',
                   }}

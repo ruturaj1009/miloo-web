@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Sparkles, Heart } from 'lucide-react';
 
 export default function Testimonials() {
@@ -106,7 +107,7 @@ export default function Testimonials() {
                   fontWeight: 700,
                   border: '1px solid rgba(255, 255, 255, 0.12)',
                   boxShadow: '0 10px 25px rgba(0, 0, 0, 0.4)',
-                  transition: 'all 0.25s ease',
+                  transition: 'transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease',
                   textDecoration: 'none',
                 }}
                 onMouseEnter={(e) => {
@@ -159,13 +160,13 @@ export default function Testimonials() {
                 backgroundColor: '#161922',
               }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/miloo_couple_spotlight.jpg"
+              <Image
+                src="/images/miloo_couple_spotlight.webp"
                 alt="Elena and Mateo laughing together"
+                fill
+                sizes="(max-width: 768px) 100vw, 520px"
+                loading="lazy"
                 style={{
-                  width: '100%',
-                  height: '100%',
                   objectFit: 'cover',
                   objectPosition: 'center 20%',
                 }}

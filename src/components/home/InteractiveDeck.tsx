@@ -669,9 +669,9 @@ export default function InteractiveDeck() {
             {/* Header: Name, Age, Verified badge */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <h3 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#FFFFFF' }}>
+                <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#FFFFFF' }}>
                   {currentProfile.name}
-                </h3>
+                </h2>
                 <span style={{ fontSize: '1.6rem', fontWeight: 400, color: 'rgba(255, 255, 255, 0.85)' }}>
                   {currentProfile.age}
                 </span>

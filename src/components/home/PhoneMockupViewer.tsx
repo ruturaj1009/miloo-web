@@ -310,8 +310,9 @@ export default function PhoneMockupViewer() {
                   <div className="deck-card card-underneath">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80"
+                      src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=450&auto=format&fit=crop&q=75"
                       alt="Chloe Profile"
+                      loading="lazy"
                       className="card-full-img"
                     />
                     <div className="card-gradient-overlay" />
@@ -329,8 +330,9 @@ export default function PhoneMockupViewer() {
                     {/* Photo 1: Portrait */}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=450&auto=format&fit=crop&q=75"
                       alt="Yuki Profile"
+                      loading="lazy"
                       className="card-full-img yuki-img-1"
                     />
 
@@ -645,7 +647,7 @@ export default function PhoneMockupViewer() {
           border: 1.5px solid var(--glass-border);
           font-size: 0.92rem;
           cursor: pointer;
-          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+          transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
         }
 
         .feature-pill-btn:hover {
@@ -657,9 +659,12 @@ export default function PhoneMockupViewer() {
           position: absolute;
           bottom: 0;
           left: 0;
+          width: 100%;
           height: 2.5px;
           border-radius: 9999px;
+          transform-origin: left;
           animation: pillProgressFill 6s linear forwards;
+          will-change: transform;
         }
 
         .pill-auto-bar.is-paused {
@@ -667,8 +672,8 @@ export default function PhoneMockupViewer() {
         }
 
         @keyframes pillProgressFill {
-          from { width: 0%; }
-          to { width: 100%; }
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
         }
 
         /* 2-Column Split */
@@ -692,7 +697,7 @@ export default function PhoneMockupViewer() {
           cursor: pointer;
           position: relative;
           overflow: hidden;
-          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+          transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
         }
 
         .feature-select-card:hover {
@@ -1093,8 +1098,8 @@ export default function PhoneMockupViewer() {
         }
 
         @keyframes likePulseGlow {
-          32%, 42% { transform: scale(1.18); box-shadow: 0 0 22px rgba(16, 185, 129, 0.7); background-color: rgba(16, 185, 129, 0.2) !important; }
-          0%, 28%, 46%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); background-color: #161922 !important; }
+          32%, 42% { transform: scale(1.15); }
+          0%, 28%, 46%, 100% { transform: scale(1); }
         }
 
         .dock-action-boost {
@@ -1386,7 +1391,7 @@ export default function PhoneMockupViewer() {
           justify-content: center !important;
           color: #E2E8F0 !important;
           cursor: pointer;
-          transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+          transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
@@ -1772,7 +1777,7 @@ export default function PhoneMockupViewer() {
           font-size: 0.84rem;
           font-weight: 600;
           cursor: pointer;
-          transition: all 0.2s ease;
+          transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
         }
 
         .match-cta-secondary:hover {
@@ -1819,7 +1824,7 @@ export default function PhoneMockupViewer() {
           color: var(--text-secondary);
           font-size: 0.78rem;
           cursor: pointer;
-          transition: all 0.2s ease;
+          transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
         }
 
         .replay-btn:hover {

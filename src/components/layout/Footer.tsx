@@ -45,7 +45,7 @@ export default function Footer() {
           font-size: 0.88rem;
           color: var(--text-secondary);
           text-decoration: none;
-          transition: all 0.2s ease;
+          transition: transform 0.2s ease, color 0.2s ease;
           display: inline-block;
         }
         .footer-nav-link:hover {
@@ -62,7 +62,7 @@ export default function Footer() {
           justify-content: center;
           color: var(--text-secondary);
           border: 1px solid rgba(255, 255, 255, 0.08);
-          transition: all 0.2s ease;
+          transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
           text-decoration: none;
         }
         .footer-social-btn:hover {
@@ -84,29 +84,20 @@ export default function Footer() {
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.65), 0 0 30px -10px rgba(255, 68, 88, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.12);
-          transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+          transition: transform 0.3s ease;
         }
         .footer-qr-card:hover {
           transform: translateY(-3px);
-          border-color: rgba(255, 68, 88, 0.35) !important;
-          box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.8), 0 0 40px -8px rgba(255, 68, 88, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
-        }
-        @keyframes livePulse {
-          0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-          70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-        }
-        .qr-live-pulse {
-          animation: livePulse 2s infinite;
         }
         @keyframes qrLaserSweep {
-          0% { top: 4%; opacity: 0; }
+          0% { transform: translateY(0); opacity: 0; }
           15% { opacity: 0.9; }
           85% { opacity: 0.9; }
-          100% { top: 94%; opacity: 0; }
+          100% { transform: translateY(148px); opacity: 0; }
         }
         .qr-scan-beam {
           position: absolute;
+          top: 8px;
           left: 0;
           right: 0;
           height: 2px;
@@ -114,13 +105,14 @@ export default function Footer() {
           box-shadow: 0 0 8px rgba(255, 68, 88, 0.8), 0 0 14px rgba(0, 201, 255, 0.5);
           animation: qrLaserSweep 3s ease-in-out infinite;
           pointer-events: none;
+          will-change: transform, opacity;
         }
         .qr-corner {
           position: absolute;
           width: 12px;
           height: 12px;
           pointer-events: none;
-          transition: all 0.25s ease;
+          transition: transform 0.25s ease;
         }
         .qr-corner-tl {
           top: -3px;
@@ -279,7 +271,7 @@ export default function Footer() {
               <div
                 style={{
                   fontSize: '0.78rem',
-                  color: 'rgba(255, 255, 255, 0.55)',
+                  color: 'var(--text-secondary)',
                   lineHeight: 1.35,
                   marginBottom: '12px',
                 }}
@@ -436,18 +428,18 @@ export default function Footer() {
             >
               {/* Product */}
               <div>
-                <h4
+                <h3
                   style={{
                     fontSize: '0.8rem',
                     textTransform: 'uppercase',
                     letterSpacing: '0.08em',
                     fontWeight: 800,
-                    color: 'rgba(255, 255, 255, 0.45)',
+                    color: 'var(--text-muted)',
                     marginBottom: '16px',
                   }}
                 >
                   Product
-                </h4>
+                </h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <li><Link href="/#discover" className="footer-nav-link">Discovery Deck</Link></li>
                   <li><Link href="/features" className="footer-nav-link">Core Features</Link></li>
@@ -476,18 +468,18 @@ export default function Footer() {
 
               {/* Trust & Safety */}
               <div>
-                <h4
+                <h3
                   style={{
                     fontSize: '0.8rem',
                     textTransform: 'uppercase',
                     letterSpacing: '0.08em',
                     fontWeight: 800,
-                    color: 'rgba(255, 255, 255, 0.45)',
+                    color: 'var(--text-muted)',
                     marginBottom: '16px',
                   }}
                 >
                   Trust &amp; Safety
-                </h4>
+                </h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <li><Link href="/safety" className="footer-nav-link">Safety Center</Link></li>
                   <li><Link href="/safety#verification" className="footer-nav-link">3D Selfie Check</Link></li>
@@ -499,18 +491,18 @@ export default function Footer() {
 
               {/* Company */}
               <div>
-                <h4
+                <h3
                   style={{
                     fontSize: '0.8rem',
                     textTransform: 'uppercase',
                     letterSpacing: '0.08em',
                     fontWeight: 800,
-                    color: 'rgba(255, 255, 255, 0.45)',
+                    color: 'var(--text-muted)',
                     marginBottom: '16px',
                   }}
                 >
                   Company
-                </h4>
+                </h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <li><Link href="/about" className="footer-nav-link">About Miloo</Link></li>
                   <li><Link href="/stories" className="footer-nav-link">Member Stories</Link></li>
@@ -543,18 +535,18 @@ export default function Footer() {
 
               {/* Legal & Privacy */}
               <div>
-                <h4
+                <h3
                   style={{
                     fontSize: '0.8rem',
                     textTransform: 'uppercase',
                     letterSpacing: '0.08em',
                     fontWeight: 800,
-                    color: 'rgba(255, 255, 255, 0.45)',
+                    color: 'var(--text-muted)',
                     marginBottom: '16px',
                   }}
                 >
                   Legal
-                </h4>
+                </h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <li><Link href="/terms" className="footer-nav-link">Terms of Service</Link></li>
                   <li><Link href="/privacy" className="footer-nav-link">Privacy Policy</Link></li>
