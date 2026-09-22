@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Sparkles, Flame, ShieldCheck, Video } from 'lucide-react';
 
 interface LifestyleCard {
@@ -21,7 +22,7 @@ const CARDS: LifestyleCard[] = [
   {
     id: 'coffee',
     tag: 'Sunday Matchas',
-    imageUrl: '/images/lifestyle_matcha_cafe.jpg',
+    imageUrl: '/images/lifestyle_matcha_cafe.webp',
     alt: 'Smiling woman enjoying iced matcha latte at sunlit cafe',
     prompt: 'Cold brew & quiet Sunday mornings ☕',
     defaultLeft: '0px',
@@ -34,7 +35,7 @@ const CARDS: LifestyleCard[] = [
   {
     id: 'vinyl',
     tag: 'Vinyl Records',
-    imageUrl: '/images/lifestyle_vinyl_music.jpg',
+    imageUrl: '/images/lifestyle_vinyl_music.webp',
     alt: 'Creative music lover browsing vinyl records in indie shop',
     prompt: 'Obsessed with obscure jazz cafés 🎶',
     defaultLeft: '140px',
@@ -47,7 +48,7 @@ const CARDS: LifestyleCard[] = [
   {
     id: 'travel',
     tag: 'Sunset Hikes',
-    imageUrl: '/images/lifestyle_sunset_hike.jpg',
+    imageUrl: '/images/lifestyle_sunset_hike.webp',
     alt: 'Adventurer laughing on scenic alpine ridge at sunset',
     prompt: 'Next stop: mountain trails & road trips 🏔️',
     defaultLeft: '275px',
@@ -278,16 +279,16 @@ export default function MissionShowcase() {
                       boxShadow: isHovered
                         ? '0 32px 75px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 68, 88, 0.4), 0 0 0 2px rgba(255, 255, 255, 0.3)'
                         : '0 20px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1)',
-                      transition: 'all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1)',
+                      transition: 'transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease',
                     }}
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={card.imageUrl}
                       alt={card.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 320px"
+                      loading="lazy"
                       style={{
-                        width: '100%',
-                        height: '100%',
                         objectFit: 'cover',
                         transition: 'transform 0.4s ease',
                         transform: isHovered ? 'scale(1.04)' : 'scale(1)',

@@ -139,16 +139,19 @@ export default function HeroSection() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
               <div style={{ display: 'flex', marginLeft: '6px' }}>
                 {[
-                  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80',
-                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
-                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
-                  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
+                  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=75',
+                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=75',
+                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=75',
+                  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&auto=format&fit=crop&q=75',
                 ].map((src, i) => (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     key={i}
                     src={src}
                     alt="Miloo user"
+                    width={38}
+                    height={38}
+                    loading="lazy"
                     style={{
                       width: '38px',
                       height: '38px',
