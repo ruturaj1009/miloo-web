@@ -1,0 +1,103 @@
+/**
+ * Centralized Miloo Design Tokens & Color Palette
+ * Sourced directly from app/.agent/skills/app-ui/SKILL.md and app/src/theme/colors.ts.
+ * Changing values in this file instantly transforms the entire web app theme.
+ */
+
+:root {
+  /* 1. Brand Accents & Gradients */
+  --brand-primary: #FF4458;
+  --brand-primary-hover: #FF5864;
+  --brand-secondary: #7C3AED;
+  --brand-secondary-light: #6366F1;
+  --accent-cyan: #00C9FF;
+  --accent-cyan-dark: #0072FF;
+
+  /* 2. Action & Interaction Colors */
+  --color-like: #10B981;
+  --color-like-glow: rgba(16, 185, 129, 0.4);
+  --color-like-bg: rgba(16, 185, 129, 0.15);
+
+  --color-pass: #FF4458;
+  --color-pass-glow: rgba(255, 68, 88, 0.4);
+  --color-pass-bg: rgba(255, 68, 88, 0.15);
+
+  --color-superlike: #00C9FF;
+  --color-superlike-glow: rgba(0, 201, 255, 0.4);
+  --color-superlike-bg: rgba(0, 201, 255, 0.15);
+
+  --color-boost: #A855F7;
+  --color-boost-glow: rgba(168, 85, 247, 0.4);
+  --color-boost-bg: rgba(168, 85, 247, 0.15);
+
+  --color-undo: #F59E0B;
+  --color-undo-glow: rgba(245, 158, 11, 0.4);
+  --color-undo-bg: rgba(245, 158, 11, 0.15);
+
+  /* 3. Dark Moody Canvases & Surfaces (SKILL.md: #0F1115, #161922) */
+  --bg-primary: #0F1115;
+  --bg-secondary: #161922;
+  --bg-card: #1B202D;
+  --bg-elevated: #242A3C;
+  --bg-backdrop: rgba(0, 0, 0, 0.82);
+
+  /* 4. Glassmorphism & Translucent Surfaces */
+  --glass-bg: rgba(22, 25, 34, 0.75);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.04);
+  --glass-bg-card: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-subtle: rgba(255, 255, 255, 0.05);
+  --glass-border-strong: rgba(255, 255, 255, 0.18);
+  --glass-border-glow: rgba(255, 68, 88, 0.35);
+
+  /* 5. Typography */
+  --text-primary: #FFFFFF;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --text-dark: #0F1115;
+  --text-link: #00C9FF;
+
+  /* 6. Presence & Badges */
+  --badge-online: #10B981;
+  --badge-offline: #6B7280;
+  --badge-verified: #38BDF8;
+  --badge-premium: #F59E0B;
+
+  /* 7. Gradients */
+  --gradient-brand: linear-gradient(135deg, #FF4458 0%, #7C3AED 100%);
+  --gradient-brand-horizontal: linear-gradient(90deg, #FF4458 0%, #7C3AED 100%);
+  --gradient-brand-sunset: linear-gradient(135deg, #FF4458 0%, #FF7A00 100%);
+  --gradient-superlike: linear-gradient(135deg, #00C9FF 0%, #0072FF 100%);
+  --gradient-match: linear-gradient(135deg, #10B981 0%, #00E676 100%);
+  --gradient-boost: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+  --gradient-gold: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  --gradient-dark-glass: linear-gradient(180deg, rgba(36, 42, 60, 0.85) 0%, rgba(22, 25, 34, 0.85) 100%);
+  --gradient-card-overlay: linear-gradient(to top, rgba(15, 17, 21, 0.95) 0%, rgba(15, 17, 21, 0.5) 45%, transparent 100%);
+
+  /* 8. Geometry & Ergonomics (SKILL.md) */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-card: 26px;
+  --radius-modal: 28px;
+  --radius-pill: 9999px;
+
+  /* 9. Shadows & Glows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow-primary: 0 8px 30px rgba(255, 68, 88, 0.35);
+  --shadow-glow-secondary: 0 8px 30px rgba(124, 58, 237, 0.35);
+  --shadow-glow-cyan: 0 8px 30px rgba(0, 201, 255, 0.35);
+  --shadow-glow-emerald: 0 8px 30px rgba(16, 185, 129, 0.35);
+
+  /* 10. Layout Spacing */
+  --container-max: 1240px;
+  --nav-height: 80px;
+
+  /* 11. Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
