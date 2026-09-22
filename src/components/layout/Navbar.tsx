@@ -37,7 +37,7 @@ export default function Navbar() {
           right: 0,
           zIndex: 1000,
           height: 'var(--nav-height)',
-          transition: 'all 0.3s ease',
+          transition: 'background-color 0.3s ease, border-color 0.3s ease',
           backgroundColor: scrolled ? 'rgba(15, 17, 21, 0.88)' : 'transparent',
           backdropFilter: scrolled ? 'blur(16px)' : 'none',
           WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',

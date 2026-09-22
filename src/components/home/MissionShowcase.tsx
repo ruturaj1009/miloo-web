@@ -286,7 +286,7 @@ export default function MissionShowcase() {
                       src={card.imageUrl}
                       alt={card.alt}
                       fill
-                      sizes="(max-width: 768px) 100vw, 320px"
+                      sizes="(max-width: 640px) 280px, 320px"
                       loading="lazy"
                       style={{
                         objectFit: 'cover',
@@ -328,7 +328,6 @@ export default function MissionShowcase() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         pointerEvents: 'none',
-                        transition: 'box-shadow 0.3s ease',
                       }}
                     >
                       {card.tag}
@@ -352,7 +351,6 @@ export default function MissionShowcase() {
                         color: '#FFFFFF',
                         fontWeight: 600,
                         boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
-                        transition: 'border-color 0.3s ease',
                       }}
                     >
                       {card.prompt}
