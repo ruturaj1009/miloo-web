@@ -791,7 +791,7 @@ export default function InteractiveDeck() {
             alignItems: 'center',
             justifyContent: 'center',
             boxShadow: '0 4px 15px rgba(245, 158, 11, 0.2)',
-            transition: 'all var(--transition-fast)',
+            transition: 'transform var(--transition-fast), background-color var(--transition-fast)',
           }}
           onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
           onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
@@ -815,7 +815,7 @@ export default function InteractiveDeck() {
             alignItems: 'center',
             justifyContent: 'center',
             boxShadow: '0 4px 20px rgba(255, 68, 88, 0.35)',
-            transition: 'all var(--transition-fast)',
+            transition: 'transform var(--transition-fast), background-color var(--transition-fast)',
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.1)';
@@ -845,7 +845,7 @@ export default function InteractiveDeck() {
             alignItems: 'center',
             justifyContent: 'center',
             boxShadow: '0 4px 18px rgba(0, 201, 255, 0.3)',
-            transition: 'all var(--transition-fast)',
+            transition: 'transform var(--transition-fast), background-color var(--transition-fast)',
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.1)';
@@ -875,7 +875,7 @@ export default function InteractiveDeck() {
             alignItems: 'center',
             justifyContent: 'center',
             boxShadow: '0 4px 20px rgba(16, 185, 129, 0.35)',
-            transition: 'all var(--transition-fast)',
+            transition: 'transform var(--transition-fast), background-color var(--transition-fast)',
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.1)';
@@ -907,7 +907,7 @@ export default function InteractiveDeck() {
             boxShadow: boostActive
               ? '0 0 22px rgba(168, 85, 247, 0.75), inset 0 0 10px rgba(168, 85, 247, 0.4)'
               : '0 4px 15px rgba(168, 85, 247, 0.2)',
-            transition: 'all var(--transition-fast)',
+            transition: 'transform var(--transition-fast), background-color var(--transition-fast)',
             animation: boostActive ? 'boostGlowPulse 2s infinite ease-in-out' : 'none',
           }}
           onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
