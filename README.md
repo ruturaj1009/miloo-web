@@ -1,9 +1,5 @@
 # Miloo — Next-Gen Dating App Web Platform
 
-<div align="center">
-
-![Miloo Banner](https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=1200&q=80)
-
 ### *Chemistry, Not Just Matches.*
 
 A modern, high-performance web platform and landing experience for **Miloo** — the next-generation dating app engineered for authentic chemistry, fluid motion, verified profiles, and in-app video dates.
